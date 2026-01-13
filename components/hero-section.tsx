@@ -5,18 +5,30 @@ import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background -z-10" />
+    <section className="relative h-screen flex items-center justify-center pt-16 overflow-hidden">
+      
+      {/* Background image */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/hod.jpg')" }}
+        
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 text-center">
+      {/* Overlay for readability */}
+      {/* <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/90 via-secondary/75 to-background/90" /> */}
+
+      {/* Content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 text-center">
         <div className="space-y-6">
+
           {/* Main Heading */}
           <div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-4">
               <span className="text-balance">Xeon Collection</span>
             </h1>
-            <p className="text-xl md:text-2xl text-foreground/80 text-balance mb-2">Premium Quality Clothing</p>
+            <p className="text-xl md:text-2xl text-foreground/80 text-balance mb-2">
+              Premium Quality Clothing
+            </p>
           </div>
 
           {/* Tagline */}
@@ -33,6 +45,7 @@ export function HeroSection() {
               Shop Now
               <ArrowRight className="w-5 h-5" />
             </Link>
+
             <Link
               href="#collections"
               className="inline-flex items-center gap-2 border-2 border-foreground text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-foreground/5 transition"
@@ -40,6 +53,7 @@ export function HeroSection() {
               Explore Collections
             </Link>
           </div>
+
         </div>
       </div>
     </section>
